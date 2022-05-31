@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+.Footer{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 15px 0 15px;
+}
+
+.Footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Footer-name{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+.Footer-title,
+.Footer-copy,
+.Footer-name{
+    color: blue;
+
+}

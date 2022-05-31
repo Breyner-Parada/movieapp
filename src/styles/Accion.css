@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Body-action{
+    margin: 0 10px
+}
+
+.Header-action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.Header-arrow{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+}
+
+.Action-search{
+    width: 150px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    background-color: rgb(226, 233, 233);
+    outline: none;
+    margin-right: 10px;
+    border-radius: 9px;
+}
+.Action-search::placeholder{
+    color: rgb(247, 23, 3);
+    padding-left: 5px;
+}
+.Action-list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.Action-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.Action-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    width: 300px;
+}
+.Action-info p{
+    font-size: 16.5px;
+    text-align: justify;
+}
+.Action-info p b{
+    color: blue;
+}
+    
+.Action-img{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: transform 1s;
+}
+.Action-img:hover{
+    transform: translate(305px, 0);
+    transition: transform 1s;
+}
+.No-result{
+    margin-top: 30px;
+    color: crimson;
+    text-align: center;
+    font-size: 30px;
+}
+
+@media (min-width:1000px) {
+    .Body-action{
+        margin: 0 20%;
+    }
+    .Action-search{
+        width: 40%;
+    }
+}

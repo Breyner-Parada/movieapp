@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap');
+.Body-home{
+    margin: 10px 10px 0 10px;
+}
+
+.Home-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+.Title {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+}
+.Trending{
+    font-family: 'Cinzel', serif;
+}
+.Loading{
+    display: flex;
+    justify-content: center;
+}
+.Input-container{
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.Search{
+    width: 85%;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    background-color: rgb(226, 233, 233);
+    transition: transform 0.5s;
+    outline: none;
+}
+.Search::placeholder{
+    padding-left: 5px;
+    color: rgb(17, 0, 251);
+}
+.Search:hover{
+    transform: scale(1.05);
+    transition: transform .5s;
+}
+.Button-search{
+    width: 40px;
+    border: none;
+    transition: transform 0.5s;
+}
+.Button-search:hover{
+    transform: scale(1.05);
+    transition: transform .5s;
+    color: rgb(248, 2, 248);
+}
+
+.Container-slider{
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    max-width: 620px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.Front{
+    border-radius: 5px;
+    margin-right: 10px;
+    scroll-snap-align: start;
+    backface-visibility: hidden;
+}
+
+
+.Title-categories{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    font-family: 'Cinzel', serif;
+}
+
+.Categories{
+    display: flex;
+    justify-content: space-around;
+}
+
+.Categories-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 40px;
+}
+
+.Categories-list a {
+    list-style: none;
+    text-decoration: none;
+}
+.Search-img{
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: auto;
+    place-content: center;
+    gap: 5px;
+}
+@media (min-width: 1000px) {
+    .Body-home{
+        margin: 0 20%;
+    }
+    .Container-slider{
+        max-width: 1240px;
+    }
+}
