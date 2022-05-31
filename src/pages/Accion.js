@@ -47,7 +47,7 @@ export const Accion = () => {
 
       <div className='Header-action'>
         <div className='Header-arrow'>
-          <Link to="/">
+          <Link to="/movieapp">
             <IoIosArrowBack />
           </Link>
         </div>

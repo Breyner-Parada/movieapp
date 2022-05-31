@@ -12,7 +12,7 @@ function App() {
     <>
     <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Page.Home />} />
+          <Route path="/movieapp" element={<Page.Home />} />
           <Route path="/action" element={<Page.Accion />} />
           <Route path="/search" element={<Page.Search />} />
           <Route path="*" element={<Page.NotFound />} />

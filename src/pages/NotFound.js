@@ -8,7 +8,7 @@ export const NotFound = () => {
     <div className='Body-notfound'>
       
       <div className='Notfound-arrow'>
-          <Link to="/">
+          <Link to="/movieapp">
             <IoIosArrowBack />
           </Link>
       </div>
