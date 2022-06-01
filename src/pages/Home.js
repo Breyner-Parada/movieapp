@@ -96,7 +96,7 @@ if(!value){
       <section className='Categories'> 
         <ul className='Categories-list'>
           {categories.map(element => (
-            <Link to={`/${element.name}`}>
+            <Link to={`/movieapp/${element.name}`}>
               <li id={element.id}>
                 {element.name}
               </li>
