@@ -1,4 +1,5 @@
 export { Home } from './Home';
-export { Search } from './Search';
 export { NotFound } from './NotFound';
-export { Accion } from './Accion';
+export { Categories } from './Categories';
+export { MovieDetail } from './MovieDetail';
+export { SearchMovie } from './SearchMovie';

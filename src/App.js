@@ -13,7 +13,9 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path="/movieapp" element={<Page.Home />} />
-          <Route path="/movieapp/action" element={<Page.Accion />} />
+          <Route path="/movieapp/category/:name/:id" element={<Page.Categories />} />
+          <Route path="/movieapp/movie/:id" element={<Page.MovieDetail />} />
+          <Route path="/movieapp/movies/search/:query" element={<Page.SearchMovie />} />
           <Route path="*" element={<Page.NotFound />} />
         </Routes>
     </BrowserRouter>

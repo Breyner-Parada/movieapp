@@ -4,6 +4,7 @@ import {RiMovie2Line} from 'react-icons/ri';
 import {BsSearch} from 'react-icons/bs';
 import { Loading } from '../Components/Loading';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
 const api = axios.create({
@@ -13,30 +14,20 @@ const api = axios.create({
     'Content-type': 'application/json',
   },
   params: {
-    'api_key': '09709bcb90d7e2d76a129709c7bddd9d'
+    api_key: process.env.REACT_APP_API_KEY_MOVIE
   }
-})
+});
 
 
-// const API_URL = 'https://api.themoviedb.org/3?api_key=09709bcb90d7e2d76a129709c7bddd9d'
+
 
 export const Home = () => {
-
+  const navigate = useNavigate();
   const [movie, setMovie] = React.useState([]);
   const [categories, setCategories] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
-  const [search, setSearch] = React.useState([]);
   const [value, setValue] = React.useState('');
 
-  async function searchMovies () {
-    const {data} = await api('/search/movie', {
-      params: {
-        query: value
-      }
-    });
-    setSearch(data.results);
-    console.log(data);
-  }
 
   React.useEffect(() => {
     if(loading){
@@ -54,9 +45,11 @@ export const Home = () => {
       setCategories(data.genres);
     }
     categoriesMoviesPreview();
+
+
   }, [loading])
 
-if(!value){
+
   return (
     <div className='Body-home' >
       <div className='Home-header'>
@@ -71,13 +64,28 @@ if(!value){
           onChange={(event) => setValue(event.target.value)}  />
           <button
           className='Button-search'
-          onClick={searchMovies}
+          onClick={() => navigate(`/movieapp/movies/search/${value}`)}
           >
             <BsSearch />
           </button>
         </div>
           
       </div>
+
+      <h2 className='Title-categories'>Categories</h2>
+      <section className='Categories'> 
+        <ul className='Categories-list'>
+          {categories.map(element => (
+            <Link to={`/movieapp/category/${element.name}/${element.id}`}>
+              <div className='Circle' id={'id' + element.id}></div>
+              <li >
+                {element.name}
+              </li>
+            </Link>
+
+          ))}  
+        </ul>       
+      </section>
 
       <h2 className='Trending'>Trending</h2>
       <div className='Loading'>
@@ -87,57 +95,18 @@ if(!value){
       <article className='Container-slider'>
         {movie.map(element => (
           <div className='Card'>
-            <img className='Face Front' alt={element.original_title} src={`https://image.tmdb.org/t/p/w300${element.poster_path}`} />
+            <img 
+            className='Face Front' 
+            alt={element.original_title} 
+            src={`https://image.tmdb.org/t/p/w300${element.poster_path}`} 
+            onClick={() => navigate(`/movieapp/movie/${element.id}`)}
+            />
+            
           </div>
         ))}
       </article>
 
-      <h2 className='Title-categories'>Categories</h2>
-      <section className='Categories'> 
-        <ul className='Categories-list'>
-          {categories.map(element => (
-            <Link to={`/movieapp/${element.name}`}>
-              <li id={element.id}>
-                {element.name}
-              </li>
-            </Link>
-
-          ))}  
-        </ul>       
-          
-      </section>
-
     </div>
   )
-}
-else{
-  return (
-    <div className='Body-home'>
-      <div className='Home-header'>
-        <div className='Main-title'>
-          <h1 className='Title'>
-              <RiMovie2Line />MoviesRoom
-          </h1>
-        </div>
-        <div className='Input-container'>
-          <input className='Search' placeholder='Search' 
-          value={value} 
-          onChange={(event) => setValue(event.target.value)}  />
-          <button
-          className='Button-search'
-          onClick={searchMovies}
-          >
-            <BsSearch />
-          </button>
-        </div>
-      </div>
-      <div className='Search-img'>
-        {search.map(element =>(
-          <img className='Face Front' alt={element.original_title} src={`https://image.tmdb.org/t/p/w300${element.poster_path}`} />
-        ))}
-      </div>
-    </div>
-  )
-}
   
 }
