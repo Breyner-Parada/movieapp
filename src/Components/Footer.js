@@ -18,7 +18,7 @@ export const Footer = () => {
                     <div><a href='https://github.com/Breyner-Parada'><BsGithub /></a></div>
                 </div>
             <div className='Footer-info'>
-                <div>Información</div>
+                <div>Information</div>
                 <div>paradabre@gmail.com</div>
                 <div>+573174531701</div>
                 <div>Bucaramanga, Colombia</div>
