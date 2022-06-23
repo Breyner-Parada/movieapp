@@ -105,15 +105,18 @@
     }
     
 }
-@media (max-width: 400px){
+@media (max-width: 450px){
     .Category-list{
         display: grid;
-        grid-template-columns: repeat(2, 150px);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         place-items: center;
         }
         .Category-img{
             width: 140px;
             height: 190px;
+            text-align: center;
+            line-height: 190px; 
+            font-size: 15px;
         }
 }

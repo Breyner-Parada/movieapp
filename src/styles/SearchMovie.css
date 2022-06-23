@@ -30,13 +30,13 @@
     font-size: 25px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .Header-arrow{
         width: 40%;
     }
     .Search-container-img{
         display: grid;
-        grid-template-columns: repeat(2, 150px);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         place-items: center;
         }
