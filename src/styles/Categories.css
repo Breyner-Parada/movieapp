@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Body-action{
+    margin: 0 10px
+}
+
+.Header-action{
+    margin-top: 10px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.Header-arrow{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    cursor: pointer;
+}
+.Header-arrow a{
+    color: rgb(8, 8, 8);
+
+}
+
+.Category-search{
+    width: 150px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    background-color: rgb(226, 233, 233);
+    outline: none;
+    margin-right: 10px;
+    border-radius: 9px;
+    padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.Category-search::placeholder{
+    color: rgb(247, 23, 3);
+}
+.Category-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: auto;
+    place-content: center;
+    gap: 5px;
+}
+.Category-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.Category-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    width: 300px;
+}
+.Category-info p{
+    font-size: 16.5px;
+    text-align: justify;
+}
+.Category-info p b{
+    color: blue;
+} 
+.Category-img{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+.Primary-button{
+    display: flex;
+    width: auto;
+    justify-content: center;
+}
+.Button-show-more{
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(10, 20, 227);
+    color: aliceblue;
+}
+
+.No-result{
+    margin-top: 30px;
+    color: crimson;
+    text-align: center;
+    font-size: 30px;
+}
+
+@media (min-width:1000px) {
+    .Body-action{
+        margin: 0 20%;
+    }
+    .Action-search{
+        width: 40%;
+    }
+    
+}
+@media (max-width: 400px){
+    .Category-list{
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: auto;
+        place-items: center;
+        }
+        .Category-img{
+            width: 140px;
+            height: 190px;
+        }
+}

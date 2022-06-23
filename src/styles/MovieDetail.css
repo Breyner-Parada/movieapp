@@ -1,0 +1,24 @@
+.Header-arrow{
+    position: sticky;
+    top: 0;
+}
+.Movie-list{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.Movie-container-img{
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.Movie-img{
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.Movie-info{
+    text-align: center;
+}
+.Movie-info p{
+    margin: 10px;
+    font-size: 25px;
+}

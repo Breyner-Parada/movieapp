@@ -69,7 +69,6 @@ export const Home = () => {
             <BsSearch />
           </button>
         </div>
-          
       </div>
 
       <h2 className='Title-categories'>Categories</h2>
@@ -82,7 +81,6 @@ export const Home = () => {
                 {element.name}
               </li>
             </Link>
-
           ))}  
         </ul>       
       </section>
@@ -100,8 +98,7 @@ export const Home = () => {
             alt={element.original_title} 
             src={`https://image.tmdb.org/t/p/w300${element.poster_path}`} 
             onClick={() => navigate(`/movieapp/movie/${element.id}`)}
-            />
-            
+            /> 
           </div>
         ))}
       </article>
