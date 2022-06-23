@@ -90,7 +90,6 @@
     margin-right: 10px;
     scroll-snap-align: start;
     backface-visibility: hidden;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
 }
 
@@ -179,11 +178,4 @@
     .Container-slider{
         max-width: 1240px;
     }
-}
-@media (max-width: 400px) {
-        .Front{
-            width: 140px;
-            height: 190px;
-        }
-
 }
