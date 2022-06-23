@@ -35,7 +35,6 @@ export const Home = () => {
         async function trendingMoviesPreview() {
           const {data} = await api('/trending/movie/day');
           setMovie(data.results);
-          console.log(data);
           setLoading(false);
         }, 1000
         )

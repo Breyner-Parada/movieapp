@@ -28,7 +28,6 @@ const api = axios.create({
             
             setMovie(data);
             setGenres(data.genres);
-            console.log(data);
         } 
         movieDetail();
   }, [id]);

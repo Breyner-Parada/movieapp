@@ -24,7 +24,7 @@ export const Categories = () => {
   const [page, setPage] = React.useState(1);
   const [search, setSearch] = React.useState('');
   const [action, setAction] = React.useState([]);
-  console.log(search);
+
 
   React.useEffect(() =>{
    async function actionMoviesPreview() {
